@@ -1,0 +1,52 @@
+# Datos grandes y sensibles
+src/data/*.csv
+src/data/*.xlsx
+src/data/*.parquet
+src/data/*.zip
+src/data/*.h5
+src/data/*.pkl
+src/data/*.joblib
+src/data/*.npz
+
+# Checkpoints de notebooks
+.ipynb_checkpoints/
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+
+# Archivos de caché/intermedios
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.bak
+
+# Archivos de logs y temporales
+*.log
+*.out
+*.tmp
+
+# Archivos de modelos pesados
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.tflite
+
+# Configuración de IDE
+.vscode/
+.idea/
+
+# Otros
+*.egg-info/
+*.egg
+*.swp
+*.DS_Store
+.env
+*.env
+
+# Ignorar otros archivos específicos del proyecto
+/ignore
