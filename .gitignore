@@ -54,3 +54,4 @@ __pycache__/
 # Modelos serializados (Pickle)
 *.pkl
 *.npz
+src/dl/history.json
