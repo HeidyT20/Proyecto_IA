@@ -50,3 +50,7 @@ __pycache__/
 
 # Ignorar otros archivos específicos del proyecto
 /ignore
+
+# Modelos serializados (Pickle)
+*.pkl
+*.npz
