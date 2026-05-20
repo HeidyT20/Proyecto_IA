@@ -115,12 +115,25 @@ Genera: `src/ml/modelo_rf.pkl`, `src/ml/modelo_lr.pkl`, `src/ml/scaler.pkl`
 python src/ml/evaluate.py
 ```
 
-### 7. Entrenar red neuronal (Modulo C)
+### 7. Entrenar red neuronal (Módulo C)
 
 ```bash
 python src/dl/train_dl.py
 ```
-Genera: `src/dl/mejor_modelo_dl.pth`, `src/dl/history.json`
+Genera: `src/dl/mejor_modelo_dl.pth`, `src/dl/history.json` y `src/dl/predictions_sample.npz`
+
+> [!NOTE]
+> **Archivos Pre-entrenados Disponibles:** Para facilitar una evaluación inmediata, el repositorio **ya incluye estos archivos pre-generados** (tanto los de Machine Learning en `src/ml/` como los de Deep Learning en `src/dl/`). Esto permite ejecutar directamente el notebook de análisis, el demo de búsqueda y el pipeline integrador (`src/integration/pipeline.py`) sin necesidad de esperar entrenamientos.
+>
+> **Consejo para el Equipo (Git):** Si vuelves a ejecutar los entrenamientos locales, los archivos se regenerarán con ligeras diferencias debido a inicializaciones estocásticas locales. Para evitar conflictos de merge o commits binarios accidentales, dile a Git que ignore tus cambios locales ejecutando:
+> ```bash
+> # Para Machine Learning
+> git update-index --assume-unchanged src/ml/scaler.pkl src/ml/modelo_rf.pkl src/ml/modelo_lr.pkl
+>
+> # Para Deep Learning
+> git update-index --assume-unchanged src/dl/mejor_modelo_dl.pth src/dl/history.json src/dl/predictions_sample.npz
+> ```
+
 
 ### 8. Ejecutar el pipeline completo (Modulo E)
 
@@ -173,6 +186,7 @@ proyecto-ia/
 │       ├── pipeline.py          # Pipeline completo de extremo a extremo (Modulo E)
 │       └── verify_ethics.py     # Auditoría de sesgos y equidad en vivo (Modulo E)
 ├── notebooks/
+│   ├── demo_search.ipynb        # Demostracion del Agente CSP (Modulo A)
 │   ├── ml_analysis.ipynb        # Visualizaciones ML
 │   ├── dl_analysis.ipynb        # Curvas de entrenamiento DL
 │   └── nlp_demo.ipynb           # Comparativa de enfoques NLP
@@ -180,6 +194,7 @@ proyecto-ia/
 │   ├── propuesta.md             # Propuesta inicial del proyecto
 │   ├── asignacion_modulos.md    # Responsables por modulo
 │   ├── agente_formulacion.md    # Formulacion del agente (Modulo A)
+│   ├── arquitectura.md          # Diagrama de arquitectura de sistema
 │   ├── search_decisions.md      # Decisiones de busqueda/CSP
 │   ├── ml_decisions.md          # Decisiones de Machine Learning
 │   ├── dl_decisions.md          # Decisiones de Deep Learning

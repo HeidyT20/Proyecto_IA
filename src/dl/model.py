@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 
 class SalesDeepRegressor(nn.Module):
-    def _init_(self, input_dim=8):
-        super(SalesDeepRegressor, self)._init_()
+    def __init__(self, input_dim=8):
+        super(SalesDeepRegressor, self).__init__()
         
         # Definición de la arquitectura secuencial de la Red Densa
         self.network = nn.Sequential(
@@ -27,7 +27,7 @@ class SalesDeepRegressor(nn.Module):
         """
         return self.network(x)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     # Prueba rápida de la arquitectura con un tensor de ejemplo
     model = SalesDeepRegressor(input_dim=8)
     print("--- Estructura del Modelo de Red Neuronal (PyTorch) ---")

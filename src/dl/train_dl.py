@@ -11,7 +11,7 @@ from torch.utils.data import TensorDataset, DataLoader
 from sklearn.model_selection import train_test_split
 
 # Asegurar que el modulo local se puede importar
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(_file_), '..', '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from src.dl.model import SalesDeepRegressor
 
 def train_deep_learning():
@@ -123,5 +123,5 @@ def train_deep_learning():
         
     print(f"Archivos generados en {base_salida} (history.json, mejor_modelo_dl.pth, predictions_sample.npz)")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     train_deep_learning()
