@@ -1,3 +1,10 @@
 pandas
+numpy
 scikit-learn
 torch
+matplotlib
+seaborn
+sentence-transformers
+groq
+python-dotenv
+
